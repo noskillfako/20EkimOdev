@@ -1,3 +1,8 @@
+/// Dosya: lib/core/theme/app_colors.dart
+/// Görev / İşlev: Uygulamanın Material 3 renk paletini, tohum renklerini (Safir Mavi ve Teal),
+/// durum bildiren semantik renkleri (başarı, hata, uyarı, yıldız) ve Açık/Koyu mod
+/// yüzey ve kenarlık renk belirteçlerini (design tokens) barındırır.
+
 import 'package:flutter/material.dart';
 
 // Uygulama genelinde kullanılan renk paleti ve tasarım belirteçleri (Color Tokens)

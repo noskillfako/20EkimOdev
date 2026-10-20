@@ -1,3 +1,8 @@
+/// Dosya: lib/core/theme/app_theme.dart
+/// Görev / İşlev: Uygulamanın Material Design 3 Açık (Light) ve Koyu (Dark) ThemeData nesnelerini üretir.
+/// AppBar, Card, Button (Filled & Outlined), Input, Chip, NavigationBar, Dialog, BottomSheet
+/// ve SnackBar bileşenlerinin görsel stillerini, renklerini ve tipografisini yapılandırır.
+
 import 'package:flutter/material.dart';
 import 'app_colors.dart';
 import 'app_spacing.dart';

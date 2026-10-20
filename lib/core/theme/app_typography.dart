@@ -1,8 +1,16 @@
+/// Dosya: lib/core/theme/app_typography.dart
+/// Görev / İşlev: Uygulamanın tipografi (yazı tipi, boyut ve kalınlık) hiyerarşisini
+/// Material Design 3 TextTheme standartlarına ve ColorScheme kontrast renklerine uygun olarak oluşturur.
+
 import 'package:flutter/material.dart';
 
+// Tipografi ve metin stilleri yöneticisi sınıfı
 class AppTypography {
+  // Sınıfın dışarıdan örneklenmesini engellemek için private constructor
   AppTypography._();
 
+  /// Verilen Material 3 ColorScheme renk şemasına göre uyumlu metin teması (TextTheme) oluşturur.
+  /// Display, Headline, Title, Body ve Label boyutları ile satır yüksekliklerini ayarlar.
   static TextTheme createTextTheme(ColorScheme colorScheme) {
     return TextTheme(
       displayLarge: TextStyle(

@@ -1,3 +1,9 @@
+/// Dosya: lib/core/data/mock_store.dart
+/// Görev / İşlev: Uygulamanın bellek içi (In-Memory) sahte veri deposudur (Mock Data Store).
+/// assets/mock/ klasöründeki JSON dosyalarından kullanıcı, araç, kiralama, değerlendirme ve
+/// sohbet verilerini belleğe yükler; istatistikleri (puan, kiralama sayısı vb.) otomatik
+/// hesaplar ve favori araçları SharedPreferences ile kalıcı kılar.
+
 import 'dart:convert';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

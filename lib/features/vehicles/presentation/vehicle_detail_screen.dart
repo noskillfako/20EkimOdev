@@ -1,3 +1,7 @@
+/// Dosya: lib/features/vehicles/presentation/vehicle_detail_screen.dart
+/// Görev / İşlev: Aracın fotoğraflarını, teknik ve kiralama özelliklerini, araç sahibinin
+/// profil bilgilerini ve kullanıcı yorumlarını gösteren; tarih seçip kiralama teklifi verme
+/// veya araç sahibiyle sohbet başlatma işlemlerini yöneten detay ekranı.
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';

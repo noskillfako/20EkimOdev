@@ -1,11 +1,24 @@
+/// Dosya: lib/features/reviews/data/review_repository.dart
+/// Görev / İşlev: Araçlara ve kullanıcılara (Kiracı veya Araç Sahibi) yapılan değerlendirmeleri
+/// getirme, bir kiralamanın daha önce puanlanıp puanlanmadığını denetleme ve yeni değerlendirme
+/// ekleyip ortalama istatistikleri baştan hesaplama veri işlemlerini yönetir.
+
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../core/data/mock_store.dart';
 import '../domain/review.dart';
 
+/// Değerlendirme veri işlemleri soyut arayüzü
 abstract class ReviewRepository {
+  /// Belirli bir araca yapılmış tüm değerlendirmeleri ve araç yıldızlarını döner.
   Future<List<Review>> getReviewsForVehicle(String vehicleId);
+
+  /// Belirli bir kullanıcıya (kiracı veya sahip rolünde) yapılmış değerlendirmeleri döner.
   Future<List<Review>> getReviewsForUser(String userId, String role);
+
+  /// Kullanıcının bu kiralama için daha önce puanlama yapıp yapmadığını kontrol eder.
   Future<bool> hasReviewedRental(String rentalId, String reviewerId);
+
+  /// Yeni bir puanlama ve yorum kaydeder; aracın ve hedefin puan ortalamalarını günceller.
   Future<Review> addReview({
     required String rentalId,
     required String? vehicleId,
@@ -18,11 +31,13 @@ abstract class ReviewRepository {
   });
 }
 
+// ReviewRepository sağlayıcısı
 final reviewRepositoryProvider = Provider<ReviewRepository>((ref) {
   final store = ref.watch(mockStoreProvider);
   return FakeReviewRepository(store);
 });
 
+// MockStore üzerinde çalışan sahte değerlendirme deposu
 class FakeReviewRepository implements ReviewRepository {
   final MockStore _store;
 

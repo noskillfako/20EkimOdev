@@ -1,3 +1,8 @@
+/// Dosya: lib/features/auth/presentation/register_screen.dart
+/// Görev / İşlev: Yeni kullanıcı kayıt formudur (Register Screen).
+/// Ad Soyad, E-posta, Telefon, Şifre, Doğum Tarihi (18 yaş kontrolü), Meslek, Medeni Hal,
+/// Cinsiyet ve Rol seçimi (Kiracı, Araç Sahibi, Her İkisi) alanlarını içerir ve doğrular.
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -11,6 +16,7 @@ import '../../../core/widgets/app_buttons.dart';
 import '../../../core/widgets/app_text_field.dart';
 import 'auth_controller.dart';
 
+// Yeni kullanıcı kayıt ekranı widget'ı
 class RegisterScreen extends ConsumerStatefulWidget {
   const RegisterScreen({super.key});
 
@@ -45,6 +51,7 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
     super.dispose();
   }
 
+  /// Doğum tarihi seçimi için sistem takvimini (DatePicker) açan metot.
   Future<void> _pickBirthDate() async {
     final picked = await showDatePicker(
       context: context,
@@ -57,6 +64,7 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
     }
   }
 
+  /// Form alanlarını doğrulayan (18 yaş ve şifre kontrolü dahil) ve yeni kullanıcı kaydını başlatan metot.
   Future<void> _handleRegister() async {
     if (!_formKey.currentState!.validate()) return;
 

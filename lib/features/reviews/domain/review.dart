@@ -1,14 +1,21 @@
+/// Dosya: lib/features/reviews/domain/review.dart
+/// Görev / İşlev: Kullanıcılar ve araçlar için yapılan puan ve yorum değerlendirmelerinin
+/// etki alanı veri modelidir (Domain Model).
+/// Puanlayan kullanıcı, puanlanan hedef kişi/rol ('owner' veya 'renter'), kullanıcı yıldızı (1-5),
+/// araç kondisyon yıldızı, metin yorumu ve değerlendirme tarihini temsil eder.
+
+/// Puan ve yorum değerlendirme modeli
 class Review {
-  final String id;
-  final String rentalId;
-  final String? vehicleId;
-  final String reviewerId;
-  final String targetId;
-  final String targetRole; // 'owner' or 'renter'
-  final int stars;
-  final int? vehicleStars;
-  final String comment;
-  final String createdAt;
+  final String id; // Değerlendirmenin benzersiz kimliği (Örn: 'rev_001')
+  final String rentalId; // Değerlendirmenin ait olduğu tamamlanmış kiralama kimliği
+  final String? vehicleId; // Değerlendirilen araç kimliği (Kiracı aracı puanladıysa dolu)
+  final String reviewerId; // Değerlendirmeyi yapan kullanıcının kimliği
+  final String targetId; // Puanlanan hedef kullanıcının kimliği
+  final String targetRole; // Puanlanan rol ('owner' veya 'renter')
+  final int stars; // Kullanıcıya verilen yıldız puanı (1 - 5)
+  final int? vehicleStars; // Araca verilen yıldız puanı (1 - 5)
+  final String comment; // Kullanıcı yorum metni
+  final String createdAt; // Değerlendirmenin yazıldığı tarih (ISO format)
 
   const Review({
     required this.id,

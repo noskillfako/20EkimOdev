@@ -1,3 +1,8 @@
+/// Dosya: lib/features/vehicles/domain/vehicle.dart
+/// Görev / İşlev: Sistemdeki kiralık araçların teknik özelliklerini (marka, model, yıl, km,
+/// yakıt, vites, kasa, motor, boyutlar), fiyatlandırmasını, konumunu, popülerlik skorunu
+/// ve durumunu modelleyen etki alanı (Domain) sınıfı.
+
 // Araç etki alanı veri modeli (Domain Model)
 // Sistemdeki araçların teknik özellikleri, fiyatı, konumu, popülerlik skoru ve durumunu temsil eder
 class Vehicle {

@@ -1,3 +1,8 @@
+/// Dosya: lib/core/validators/validators.dart
+/// Görev / İşlev: Kullanıcı girişi, kayıt formu ve araç ekleme ekranlarındaki metin girdilerini
+/// doğrulayan (e-posta, şifre karmaşıklığı, ad soyad harf kontrolü, telefon, doğum tarihi/18 yaş,
+/// fiyat, kilometre, model yılı, Türkiye plakası ve yorum uzunluğu) statik validasyon fonksiyonlarıdır.
+
 // Form alanları için doğrulama ve validasyon fonksiyonları sınıfı
 class Validators {
   // Sınıfın dışarıdan örneklenmesini engellemek için private yapıcı

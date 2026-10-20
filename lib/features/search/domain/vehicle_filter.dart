@@ -1,6 +1,10 @@
+/// Dosya: lib/features/search/domain/vehicle_filter.dart
+/// Görev / İşlev: Araç arama ve filtreleme kriterlerini (fiyat, yaş, km, konum, marka, yakıt, sıralama vb.)
+/// modelleyen ve verilen araç listesine bu filtreleri uygulayıp sıralayan filtre sınıfı.
 import '../../../core/utils/haversine.dart';
 import '../../vehicles/domain/vehicle.dart';
 
+/// Araç filtreleme ve sıralama parametrelerini tutan domain modeli.
 class VehicleFilter {
   final double? minAge;
   final double? maxAge;
@@ -32,6 +36,7 @@ class VehicleFilter {
   final String sortBy; // 'recommended', 'price_asc', 'price_desc', 'newest', 'rating', 'popularity'
   final String? query;
 
+  /// Filtre nesnesi kurucusu.
   const VehicleFilter({
     this.minAge,
     this.maxAge,
@@ -64,6 +69,7 @@ class VehicleFilter {
     this.query,
   });
 
+  /// Herhangi bir aktif filtre kriteri seçilmiş mi kontrol eder.
   bool get hasActiveFilters {
     return minAge != null ||
         maxAge != null ||
@@ -92,6 +98,7 @@ class VehicleFilter {
         (query != null && query!.trim().isNotEmpty);
   }
 
+  /// Seçili aktif filtrelerin toplam adedini döner.
   int get activeFilterCount {
     int count = 0;
     if (minAge != null || maxAge != null) count++;
@@ -115,6 +122,7 @@ class VehicleFilter {
     return count;
   }
 
+  /// Mevcut filtre nesnesini belirli alanlarını güncelleyerek kopyalar.
   VehicleFilter copyWith({
     double? minAge,
     double? maxAge,
@@ -180,6 +188,7 @@ class VehicleFilter {
     );
   }
 
+  /// Verilen araç listesini mevcut filtrelere göre süzüp sıralar.
   List<Vehicle> apply(List<Vehicle> list) {
     var result = list.where((v) {
       // Query filter (search in brand, model, city, color)

@@ -1,3 +1,9 @@
+/// Dosya: lib/features/profile/presentation/profile_screen.dart
+/// Görev / İşlev: Kullanıcı profil sayfası ve ayarlar ekranıdır (Profile Tab).
+/// Kullanıcı bilgileri (avatar, adli sicil rozeti, yaş, meslek), kiralama ve puan istatistikleri,
+/// Kiracı/Araç Sahibi anlık rol değiştirme anahtarı, tema modu seçimi (Açık/Koyu/Sistem),
+/// geçmiş kullanıcı değerlendirmeleri ve oturum kapatma (Logout) işlemlerini barındırır.
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';

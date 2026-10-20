@@ -1,3 +1,8 @@
+/// Dosya: lib/features/chat/presentation/chat_room_screen.dart
+/// Görev / İşlev: İki kullanıcı arasındaki canlı mesajlaşma ve interaktif teklif pazarlığı ekranıdır (Chat Room).
+/// Standart metin mesajlarının yanı sıra kiralama teklif kartlarını (tarih, toplam tutar, onay durumu)
+/// görüntüler; araç sahibi için 'Kabul Et' / 'Reddet' aksiyonları ve yeni teklif verme alt sayfası sunar.
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../core/dialogs/app_dialogs.dart';

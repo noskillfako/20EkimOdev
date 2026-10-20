@@ -1,3 +1,9 @@
+/// Dosya: lib/main.dart
+/// Görev / İşlev: Uygulamanın ana giriş noktasıdır (Entry Point). Flutter motorunu ve widget
+/// bağlayıcılarını başlatır, MockStore bellek içi veri tabanını assets JSON dosyalarından yükler,
+/// Riverpod sağlayıcı kapsamını (ProviderScope) kurar ve temel Material 3 temasını belirleyerek
+/// uygulamayı çalıştırır.
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'core/constants/app_strings.dart';
@@ -6,7 +12,8 @@ import 'core/router/app_router.dart';
 import 'core/theme/app_theme.dart';
 import 'core/theme/theme_provider.dart';
 
-// Uygulamanın ana başlangıç noktası (Entry point)
+/// Uygulamanın ana başlangıç fonksiyonu (Entry Point).
+/// Asenkron olarak Flutter motorunu başlatır, mock verileri yükler ve ProviderScope ile uygulamayı ayağa kaldırır.
 void main() async {
   // Flutter motoru ve widget bağlayıcılarını başlatıyoruz
   WidgetsFlutterBinding.ensureInitialized();

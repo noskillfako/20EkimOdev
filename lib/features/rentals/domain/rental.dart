@@ -1,16 +1,23 @@
+/// Dosya: lib/features/rentals/domain/rental.dart
+/// Görev / İşlev: Araç kiralama ve rezervasyon işlemlerinin etki alanı veri modelidir (Domain Model).
+/// Kiralanan araç, araç sahibi, kiracı kimlikleri, kiralama tarihleri, günlük ve toplam fiyat,
+/// depozito teminatı, kiralama aşama durumu ('active', 'completed', 'pending_confirmation', 'cancelled')
+/// ve oluşturulma zamanını temsil eder.
+
+/// Araç kiralama ve sözleşme kaydı modeli
 class Rental {
-  final String id;
-  final String vehicleId;
-  final String ownerId;
-  final String renterId;
-  final String startDate;
-  final String endDate;
-  final int dailyPrice;
-  final int totalDays;
-  final int totalPrice;
-  final int deposit;
-  final String status; // 'pending_confirmation', 'active', 'completed', 'cancelled'
-  final String createdAt;
+  final String id; // Kiralama benzersiz kimliği (Örn: 'rent_001')
+  final String vehicleId; // Kiralanan aracın kimliği
+  final String ownerId; // Araç sahibinin kullanıcı kimliği
+  final String renterId; // Aracı kiralayan kiracının kullanıcı kimliği
+  final String startDate; // Kiralama başlangıç tarihi (ISO format)
+  final String endDate; // Kiralama bitiş / teslim tarihi (ISO format)
+  final int dailyPrice; // Günlük anlaşılan kiralama ücreti
+  final int totalDays; // Toplam kiralanan gün sayısı
+  final int totalPrice; // Toplam kiralama bedeli
+  final int deposit; // Alınan güvence teminatı (depozito) bedeli
+  final String status; // Durum: 'pending_confirmation', 'active', 'completed', 'cancelled'
+  final String createdAt; // Kiralama kaydının oluşturulma tarihi
 
   const Rental({
     required this.id,
@@ -27,10 +34,10 @@ class Rental {
     required this.createdAt,
   });
 
-  bool get isCompleted => status == 'completed';
-  bool get isActive => status == 'active';
-  bool get isPending => status == 'pending_confirmation';
-  bool get isCancelled => status == 'cancelled';
+  bool get isCompleted => status == 'completed'; // Kiralama süreci başarıyla tamamlandı mı
+  bool get isActive => status == 'active'; // Araç şu anda kirada / kullanımda mı
+  bool get isPending => status == 'pending_confirmation'; // Onay aşamasında mı
+  bool get isCancelled => status == 'cancelled'; // Kiralama iptal edildi mi
 
   factory Rental.fromJson(Map<String, dynamic> json) {
     return Rental(

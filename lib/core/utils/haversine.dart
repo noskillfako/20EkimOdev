@@ -1,3 +1,8 @@
+/// Dosya: lib/core/utils/haversine.dart
+/// Görev / İşlev: İki coğrafi koordinat (enlem ve boylam) arasındaki küresel kuş uçuşu
+/// mesafeyi Haversine formülü ve trigonometrik hesaplamalarla kilometre (km) cinsinden hesaplar.
+/// Araç arama ve filtreleme ekranında belirli yarıçap içindeki araçları bulmak için kullanılır.
+
 import 'dart:math' as math;
 
 // İki coğrafi koordinat (enlem ve boylam) arasındaki kuş uçuşu mesafeyi km cinsinden hesaplayan Haversine algoritması

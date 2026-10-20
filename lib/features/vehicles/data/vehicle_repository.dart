@@ -1,26 +1,53 @@
+/// Dosya: lib/features/vehicles/data/vehicle_repository.dart
+/// Görev / İşlev: Araç listeleme, detay getirme, araç ekleme, güncelleme, yayına alma/duraklatma,
+/// popüler araçlar ve favori işlemlerini MockStore üzerinde yöneten repository katmanı.
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../core/data/mock_store.dart';
 import '../domain/vehicle.dart';
 
+/// Araç veri işlemlerinin sözleşmesini (arayüzünü) tanımlayan soyut sınıf.
 abstract class VehicleRepository {
+  /// Sistemdeki tüm araçları listeler.
   Future<List<Vehicle>> getAllVehicles();
+
+  /// En yüksek popülerlik puanına sahip popüler araçları getirir.
   Future<List<Vehicle>> getPopularVehicles({int limit = 10});
+
+  /// Belirli bir ID'ye sahip aracın detaylarını getirir.
   Future<Vehicle> getVehicleById(String id);
+
+  /// Belirli bir araç sahibine ait tüm araçları listeler.
   Future<List<Vehicle>> getVehiclesByOwner(String ownerId);
+
+  /// Sisteme yeni bir araç ilanı ekler.
   Future<Vehicle> addVehicle(Vehicle vehicle);
+
+  /// Mevcut bir araç ilanının bilgilerini günceller.
   Future<Vehicle> updateVehicle(Vehicle vehicle);
+
+  /// Bir araç ilanını geçici olarak duraklatır (paused).
   Future<void> pauseVehicle(String id);
+
+  /// Duraklatılmış bir araç ilanını yeniden yayına alır (active).
   Future<void> activateVehicle(String id);
+
+  /// Bir aracı favorilere ekler veya favorilerden çıkarır.
   Future<void> toggleFavorite(String vehicleId);
+
+  /// Favoriye eklenmiş araç ID'leri kümesini döner.
   Set<String> getFavorites();
+
+  /// Marka, model, şehir, yakıt ve kasa tiplerini içeren araç kataloğunu döner.
   Map<String, dynamic> getCatalog();
 }
 
+/// VehicleRepository arayüzünün somut implementasyonunu sağlayan Riverpod sağlayıcısı.
 final vehicleRepositoryProvider = Provider<VehicleRepository>((ref) {
   final store = ref.watch(mockStoreProvider);
   return FakeVehicleRepository(store);
 });
 
+/// MockStore veri kaynağını kullanarak araç işlemlerini simüle eden sınıf.
 class FakeVehicleRepository implements VehicleRepository {
   final MockStore _store;
 

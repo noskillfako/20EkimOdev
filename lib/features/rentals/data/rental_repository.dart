@@ -1,22 +1,43 @@
+/// Dosya: lib/features/rentals/data/rental_repository.dart
+/// Görev / İşlev: Kiralama kayıtlarının oluşturulması, kiracı ve araç sahibine göre listelenmesi,
+/// teslim alma (confirmDelivery), iade alma (confirmReturn) ve iptal işlemlerini yöneten
+/// veri erişim deposudur (Repository).
+
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../core/data/mock_store.dart';
 import '../domain/rental.dart';
 
+/// Kiralama işlemleri soyut arayüzü
 abstract class RentalRepository {
+  /// Kiracının yaptığı tüm kiralama işlemlerini döner.
   Future<List<Rental>> getRentalsForRenter(String renterId);
+
+  /// Araç sahibinin kiralattığı tüm araçların kiralama kayıtlarını döner.
   Future<List<Rental>> getRentalsForOwner(String ownerId);
+
+  /// Kiralama kimliğine (id) göre tek bir kaydı getirir.
   Future<Rental> getRentalById(String id);
+
+  /// Yeni bir kiralama kaydı oluşturur ve istatistikleri günceller.
   Future<Rental> createRental(Rental rental);
+
+  /// Araç teslim alındığında kiralama durumunu 'active' yapar.
   Future<void> confirmDelivery(String rentalId);
+
+  /// Araç iade edildiğinde kiralama durumunu 'completed' yapar ve tamamlanma istatistiklerini hesaplar.
   Future<void> confirmReturn(String rentalId);
+
+  /// Belirtilen gerekçeyle kiralamayı iptal eder.
   Future<void> cancelRental(String rentalId, String reason);
 }
 
+// RentalRepository sağlayıcısı
 final rentalRepositoryProvider = Provider<RentalRepository>((ref) {
   final store = ref.watch(mockStoreProvider);
   return FakeRentalRepository(store);
 });
 
+// MockStore üzerinde çalışan sahte kiralama deposu
 class FakeRentalRepository implements RentalRepository {
   final MockStore _store;
 

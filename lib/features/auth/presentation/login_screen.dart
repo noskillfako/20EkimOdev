@@ -1,3 +1,9 @@
+/// Dosya: lib/features/auth/presentation/login_screen.dart
+/// Görev / İşlev: Kullanıcı giriş arayüzüdür (Login Screen).
+/// E-posta ve şifre doğrulaması yaparak kullanıcının oturum açmasını sağlar.
+/// Hızlı test için önceden tanımlı hazır Demo Kiracı, Demo Araç Sahibi ve Demo Çift Rol
+/// butonları ile tek tıkla giriş imkanı sunar.
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';

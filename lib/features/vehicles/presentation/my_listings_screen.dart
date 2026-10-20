@@ -1,3 +1,6 @@
+/// Dosya: lib/features/vehicles/presentation/my_listings_screen.dart
+/// Görev / İşlev: Araç sahibinin sisteme eklediği araç ilanlarını listelediği,
+/// ilan durumunu (aktif/duraklatıldı) değiştirebildiği ve yeni ilan ekleme butonunu içeren ekran.
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -10,9 +13,11 @@ import '../../../core/utils/formatters.dart';
 import '../../../core/widgets/states.dart';
 import 'vehicle_providers.dart';
 
+/// Araç sahibine ait ilanların yönetildiği ekran widget'ı.
 class MyListingsScreen extends ConsumerWidget {
   const MyListingsScreen({super.key});
 
+  /// Araç sahibinin ilanlarını ve özet istatistik kartlarını inşa eder.
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final theme = Theme.of(context);

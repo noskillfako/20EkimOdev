@@ -1,3 +1,8 @@
+/// Dosya: lib/features/auth/presentation/auth_controller.dart
+/// Görev / İşlev: Kullanıcı oturum durumunu (Session State) yöneten Riverpod StateNotifier denetleyicisidir.
+/// Uygulama açılışında kayıtlı oturumu yükler, e-posta/şifre ile giriş ve kayıt işlemlerini yürütür,
+/// Kiracı (Renter) ve Araç Sahibi (Owner) rolleri arasında anlık geçişi (switchRole) sağlar ve çıkış yapar.
+
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../data/auth_repository.dart';

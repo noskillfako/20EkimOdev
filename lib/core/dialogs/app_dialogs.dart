@@ -1,3 +1,8 @@
+/// Dosya: lib/core/dialogs/app_dialogs.dart
+/// Görev / İşlev: Uygulama genelinde standart modal iletişim pencerelerini (AlertDialog),
+/// onay diyaloglarını, başarı/hata bildirim çubuklarını (SnackBar) ve kiralama sonrası
+/// puanlama ve değerlendirme alt sayfasını (ModalBottomSheet) yöneten yardımcı sınıftır.
+
 import 'package:flutter/material.dart';
 import '../theme/app_colors.dart';
 import '../theme/app_spacing.dart';

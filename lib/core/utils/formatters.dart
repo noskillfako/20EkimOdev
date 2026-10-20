@@ -1,3 +1,8 @@
+/// Dosya: lib/core/utils/formatters.dart
+/// Görev / İşlev: Uygulama genelindeki sayısal ve zamansal verilerin kullanıcı dostu
+/// Türkçe formatta sunulmasını sağlar (TL para birimi simgesi, günlük fiyat, binlik basamaklı km,
+/// Türkçe ay isimli tarih, araç yaşı ve doğum tarihinden kullanıcı yaşı hesabı).
+
 import 'package:intl/intl.dart';
 
 // Para birimi, tarih, kilometre, yaş ve puan formatlamaları için yardımcı sınıf

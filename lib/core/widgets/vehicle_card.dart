@@ -1,3 +1,8 @@
+/// Dosya: lib/core/widgets/vehicle_card.dart
+/// Görev / İşlev: Keşfet, Popüler ve İlanlarım ekranlarında araç listelemesi için kullanılan temel kart bileşenidir.
+/// 16:9 oranlı araç görseli, şehir rozeti, favori kalbi, özellik etiketleri (yıl, km, yakıt, vites),
+/// günlük kiralama ücreti, depozito ve değerlendirme puanını şık bir Material 3 kartında gösterir.
+
 import 'package:flutter/material.dart';
 import '../../features/vehicles/domain/vehicle.dart';
 import '../theme/app_colors.dart';

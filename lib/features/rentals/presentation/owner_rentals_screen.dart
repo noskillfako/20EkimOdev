@@ -1,3 +1,8 @@
+/// Dosya: lib/features/rentals/presentation/owner_rentals_screen.dart
+/// Görev / İşlev: Araç sahibinin kiralama işlemlerini ve geçmişini listeleyen ekrandır (Geçmiş İşlemler Sekmesi).
+/// Araç teslim edildiğinde 'Teslim Edildi' onayı vermeyi, kiralama bittiğinde 'İade Alındı'
+/// butonuna basarak süreci tamamlamayı ve kiracıyı karşılıklı değerlendirmeyi (puan/yorum) sağlar.
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../core/constants/app_strings.dart';
@@ -13,6 +18,7 @@ import '../../vehicles/data/vehicle_repository.dart';
 import '../domain/rental.dart';
 import 'rental_providers.dart';
 
+// Araç sahibinin kiralama işlemlerini yönettiği ekran
 class OwnerRentalsScreen extends ConsumerWidget {
   const OwnerRentalsScreen({super.key});
 

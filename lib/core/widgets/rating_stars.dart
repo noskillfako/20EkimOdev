@@ -1,13 +1,19 @@
+/// Dosya: lib/core/widgets/rating_stars.dart
+/// Görev / İşlev: 5 yıldız üzerinden puanlama ve derecelendirme gösterge widget'ıdır.
+/// Hem salt-okunur (yarım yıldız ve değerlendirme sayısı destekli) modda
+/// hem de kullanıcı puanı seçerken dokunulabilir (interaktif) modda çalışır.
+
 import 'package:flutter/material.dart';
 import '../theme/app_colors.dart';
 import '../theme/app_spacing.dart';
 
+// Yıldızlı puanlama bileşeni
 class RatingStars extends StatelessWidget {
-  final double rating;
-  final int? count;
-  final double starSize;
-  final bool showScoreText;
-  final ValueChanged<int>? onRatingChanged;
+  final double rating; // Gösterilecek veya seçili puan (1.0 - 5.0)
+  final int? count; // Opsiyonel toplam değerlendirme sayısı (Örn: 24)
+  final double starSize; // Yıldızların piksel boyutu
+  final bool showScoreText; // Puan metninin (örn: "4.8") gösterilip gösterilmeyeceği
+  final ValueChanged<int>? onRatingChanged; // Tıklanabilir modda yeni seçilen yıldız callback'i
 
   const RatingStars({
     super.key,
@@ -18,6 +24,7 @@ class RatingStars extends StatelessWidget {
     this.onRatingChanged,
   });
 
+  /// Yıldızları ve yanındaki puan metnini oluşturan build fonksiyonu.
   @override
   Widget build(BuildContext context) {
     final isInteractive = onRatingChanged != null;

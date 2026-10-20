@@ -1,3 +1,9 @@
+/// Dosya: lib/features/gallery/component_gallery_screen.dart
+/// Görev / İşlev: Tasarım sistemi (Design System) bileşen galerisi ekranıdır.
+/// Uygulamadaki tüm ortak butonlar (Primary, Secondary, Text, Loading), avatar varyasyonları,
+/// interaktif/salt-okunur yıldız puanlama, form girdi alanları, aralık kaydırıcıları (RangeSlider),
+/// dialog/snackbar tetikleyicileri ve iskelet yüklenme efektlerini (Shimmer) tek sayfada canlı test etmeyi sağlar.
+
 import 'package:flutter/material.dart';
 import '../../core/dialogs/app_dialogs.dart';
 import '../../core/theme/app_spacing.dart';
@@ -7,6 +13,7 @@ import '../../core/widgets/rating_stars.dart';
 import '../../core/widgets/states.dart';
 import '../../core/widgets/user_avatar.dart';
 
+// Tasarım sistemi bileşen galerisi ekranı
 class ComponentGalleryScreen extends StatefulWidget {
   const ComponentGalleryScreen({super.key});
 
@@ -15,9 +22,10 @@ class ComponentGalleryScreen extends StatefulWidget {
 }
 
 class _ComponentGalleryScreenState extends State<ComponentGalleryScreen> {
-  int _interactiveRating = 4;
-  RangeValues _sliderRange = const RangeValues(1000, 4500);
+  int _interactiveRating = 4; // Canlı yıldız puanlama deneme değeri
+  RangeValues _sliderRange = const RangeValues(1000, 4500); // Örnek fiyat kaydırıcı aralığı
 
+  /// Tüm UI bileşenlerini kategorilere ayrılmış bir liste halinde oluşturan build metodu.
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);

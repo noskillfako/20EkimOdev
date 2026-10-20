@@ -1,3 +1,6 @@
+/// Dosya: lib/features/search/presentation/explore_screen.dart
+/// Görev / İşlev: Kullanıcıların kiralık araçları anahtar kelime, marka, kasa tipi, fiyat vb. kriterlere
+/// göre arayıp listeleyebildiği, sıralayabildiği ve filtre sayfasına erişebildiği Keşfet ekranı.
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -10,6 +13,7 @@ import '../../vehicles/presentation/vehicle_providers.dart';
 import 'filter_sheet.dart';
 import 'search_providers.dart';
 
+/// Araç arama, filtreleme ve listeleme ekranı widget'ı.
 class ExploreScreen extends ConsumerStatefulWidget {
   const ExploreScreen({super.key});
 
@@ -32,6 +36,7 @@ class _ExploreScreenState extends ConsumerState<ExploreScreen> {
     super.dispose();
   }
 
+  /// Sıralama seçeneklerini (fiyat, puan, popülerlik vb.) bottom sheet olarak açar.
   void _showSortSheet(BuildContext context) {
     final currentSort = ref.read(vehicleFilterProvider).sortBy;
 

@@ -1,3 +1,7 @@
+/// Dosya: lib/features/search/presentation/filter_sheet.dart
+/// Görev / İşlev: Kullanıcıların fiyat, konum/yarıçap (Haversine), araç yaşı, km,
+/// marka/model, yakıt, vites, kasa tipi ve puan kriterlerine göre gelişmiş filtreleme
+/// yapabilmelerini sağlayan alt sayfa (BottomSheet) bileşeni.
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../core/constants/app_strings.dart';

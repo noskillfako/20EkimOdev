@@ -1,3 +1,8 @@
+/// Dosya: lib/features/chat/presentation/chat_list_screen.dart
+/// Görev / İşlev: Kullanıcının tüm mesajlaşmalarını listeleyen ekrandır (Sohbet Sekmesi).
+/// Karşı tarafın avatarını (adli sicil onay rozetli), araç marka/modelini, son mesajı,
+/// güncellenme tarihini ve okunmamış mesaj rozetini gösterir; tıklandığında sohbet odasına yönlendirir.
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -13,9 +18,11 @@ import '../../vehicles/data/vehicle_repository.dart';
 import '../domain/chat.dart';
 import 'chat_providers.dart';
 
+// Mesajlaşma ve sohbet listesi ekranı
 class ChatListScreen extends ConsumerWidget {
   const ChatListScreen({super.key});
 
+  /// Kullanıcının sohbetlerini çeken ve listeyi ListView olarak oluşturan build fonksiyonu.
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final theme = Theme.of(context);

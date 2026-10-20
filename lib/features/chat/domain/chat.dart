@@ -1,9 +1,15 @@
+/// Dosya: lib/features/chat/domain/chat.dart
+/// Görev / İşlev: Uygulama içi mesajlaşma ve kiralama pazarlığı etki alanı modelleridir (Domain Models).
+/// Teklif detaylarını temsil eden `Offer`, tekil mesajları temsil eden `Message`
+/// ve araç sahibi ile kiracı arasındaki sohbet oturumunu temsil eden `Chat` sınıflarını içerir.
+
+/// Kiralama teklifi modeli (Tarih aralığı, fiyatlandırma ve onay durumu).
 class Offer {
-  final String startDate;
-  final String endDate;
-  final int dailyPrice;
-  final int totalPrice;
-  final String status; // 'pending', 'accepted', 'countered', 'rejected', 'expired'
+  final String startDate; // Kiralama başlangıç tarihi
+  final String endDate; // Kiralama bitiş tarihi
+  final int dailyPrice; // Günlük teklif edilen ücret
+  final int totalPrice; // Toplam teklif tutarı
+  final String status; // Teklif durumu: 'pending', 'accepted', 'countered', 'rejected', 'expired'
 
   const Offer({
     required this.startDate,
@@ -13,10 +19,10 @@ class Offer {
     required this.status,
   });
 
-  bool get isPending => status == 'pending';
-  bool get isAccepted => status == 'accepted';
-  bool get isRejected => status == 'rejected';
-  bool get isCountered => status == 'countered';
+  bool get isPending => status == 'pending'; // Teklif onay bekliyor mu
+  bool get isAccepted => status == 'accepted'; // Teklif kabul edildi mi
+  bool get isRejected => status == 'rejected'; // Teklif reddedildi mi
+  bool get isCountered => status == 'countered'; // Karşı teklif yapıldı mı
 
   factory Offer.fromJson(Map<String, dynamic> json) {
     return Offer(

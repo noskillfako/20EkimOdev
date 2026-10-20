@@ -1,37 +1,56 @@
+/// Dosya: lib/features/chat/data/chat_repository.dart
+/// Görev / İşlev: Sohbet listeleme, mesaj ve teklif gönderme, teklif onaylama/reddetme,
+/// mesajları okundu olarak işaretleme ve karşı taraftan simüle edilmiş otomatik cevaplar
+/// üretme (bot simülasyonu) iş mantığını yöneten veri deposudur.
+
 import 'dart:math';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../core/data/mock_store.dart';
 import '../../rentals/domain/rental.dart';
 import '../domain/chat.dart';
 
+/// Sohbet ve mesajlaşma veri işlemlerini soyutlayan arayüz
 abstract class ChatRepository {
+  /// Belirtilen kullanıcının dahil olduğu tüm sohbet odalarını güncellenme tarihine göre sıralı getirir.
   Future<List<Chat>> getChatsForUser(String userId);
+
+  /// Sohbet ID'sine göre tek bir sohbet odasının detaylarını döner.
   Future<Chat> getChatById(String chatId);
+
+  /// Araç, araç sahibi ve kiracı arasında varsa mevcut sohbeti döner, yoksa yeni bir sohbet odası oluşturur.
   Future<Chat> getOrCreateChat({
     required String vehicleId,
     required String ownerId,
     required String renterId,
   });
+
+  /// Bir sohbet odasına yeni metin veya kiralama teklifi mesajı gönderir.
   Future<Message> sendMessage({
     required String chatId,
     required String senderId,
     required String text,
     Offer? offer,
   });
+
+  /// Mesajdaki bir teklifin durumunu günceller ('accepted', 'rejected', 'countered'). Kabul edilirse Rental oluşturur.
   Future<void> updateOfferStatus({
     required String chatId,
     required String messageId,
     required String newStatus,
     required String actingUserId,
   });
+
+  /// Sohbet odasındaki okunmamış mesaj sayacını sıfırlar.
   Future<void> markChatAsRead(String chatId);
 }
 
+// ChatRepository Riverpod sağlayıcısı
 final chatRepositoryProvider = Provider<ChatRepository>((ref) {
   final store = ref.watch(mockStoreProvider);
   return FakeChatRepository(store);
 });
 
+// MockStore üzerinde çalışan sahte sohbet deposu
 class FakeChatRepository implements ChatRepository {
   final MockStore _store;
 

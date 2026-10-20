@@ -1,3 +1,8 @@
+/// Dosya: lib/core/widgets/main_shell.dart
+/// Görev / İşlev: Uygulamanın ana kabuk widget'ıdır (Main Shell).
+/// Giriş yapmış kullanıcının aktif rolüne (Kiracı / Araç Sahibi) göre alt navigasyon
+/// çubuğunun (NavigationBar) sekmelerini ve okunmamış mesaj sayacı rozetlerini (Badge) dinamik oluşturur.
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';

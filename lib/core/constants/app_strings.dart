@@ -1,4 +1,10 @@
+/// Dosya: lib/core/constants/app_strings.dart
+/// Görev / İşlev: Uygulama genelindeki tüm sabit metinleri (UI etiketleri,
+/// buton yazıları, hata ve geri bildirim mesajları, sekme isimleri) tek bir
+/// merkezden yöneterek kod tekrarını önler ve yerelleştirmeyi (i18n) kolaylaştırır.
+
 class AppStrings {
+  // Sınıfın dışarıdan örneklenmesini engellemek için private constructor
   AppStrings._();
 
   static const String appName = 'OtoKirala';

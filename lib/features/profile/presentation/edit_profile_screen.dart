@@ -1,3 +1,7 @@
+/// Dosya: lib/features/profile/presentation/edit_profile_screen.dart
+/// Görev / İşlev: Kullanıcının profil bilgilerini (Ad Soyad, Telefon Numarası, Meslek ve Medeni Hal)
+/// düzenlemesini ve güncellemelerin UserRepository ve AuthController üzerinden senkronize edilmesini sağlayan ekrandır.
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../core/dialogs/app_dialogs.dart';
@@ -8,6 +12,7 @@ import '../../../core/widgets/app_text_field.dart';
 import '../../auth/presentation/auth_controller.dart';
 import '../data/user_repository.dart';
 
+// Profil düzenleme ekranı
 class EditProfileScreen extends ConsumerStatefulWidget {
   const EditProfileScreen({super.key});
 
@@ -23,6 +28,7 @@ class _EditProfileScreenState extends ConsumerState<EditProfileScreen> {
   late String _maritalStatus;
   bool _isLoading = false;
 
+  /// Ekran açılışında mevcut kullanıcı verilerini form kutularına doldurur.
   @override
   void initState() {
     super.initState();
@@ -41,6 +47,7 @@ class _EditProfileScreenState extends ConsumerState<EditProfileScreen> {
     super.dispose();
   }
 
+  /// Form alanlarını doğrulayan ve güncellenen bilgileri depoya kaydeden fonksiyon.
   Future<void> _handleSave() async {
     if (!_formKey.currentState!.validate()) return;
 

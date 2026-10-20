@@ -1,13 +1,20 @@
+/// Dosya: lib/core/widgets/app_buttons.dart
+/// Görev / İşlev: Uygulama genelinde kullanılan standart buton bileşenleridir.
+/// Birincil aksiyon butonu (AppPrimaryButton), ikincil çerçeveli buton (AppSecondaryButton)
+/// ve sade metin butonu (AppTextButton) için yüklenme göstergesi (loading) ve ikon desteği sağlar.
+
 import 'package:flutter/material.dart';
 import '../theme/app_spacing.dart';
 
+/// Birincil vurgulu işlem butonu (FilledButton tabanlı).
+/// Form onaylama, kayıt olma, teklif verme gibi ana eylemlerde kullanılır.
 class AppPrimaryButton extends StatelessWidget {
-  final String text;
-  final VoidCallback? onPressed;
-  final bool isLoading;
-  final IconData? icon;
-  final Color? backgroundColor;
-  final Color? foregroundColor;
+  final String text; // Buton üzerinde gösterilecek metin
+  final VoidCallback? onPressed; // Tıklama aksiyonu (null ise buton devre dışı kalır)
+  final bool isLoading; // True ise metin yerine dönen yükleme çarkı gösterilir
+  final IconData? icon; // Metnin solunda yer alacak opsiyonel ikon
+  final Color? backgroundColor; // İsteğe bağlı özel arka plan rengi
+  final Color? foregroundColor; // İsteğe bağlı özel yazı/ikon rengi
 
   const AppPrimaryButton({
     super.key,
@@ -19,6 +26,7 @@ class AppPrimaryButton extends StatelessWidget {
     this.foregroundColor,
   });
 
+  /// Buton arayüzünü çizen temel widget metodu.
   @override
   Widget build(BuildContext context) {
     return FilledButton(
@@ -53,11 +61,13 @@ class AppPrimaryButton extends StatelessWidget {
   }
 }
 
+/// İkincil çerçeveli işlem butonu (OutlinedButton tabanlı).
+/// Vazgeç, iptal et, filtreleri temizle gibi alternatif eylemlerde tercih edilir.
 class AppSecondaryButton extends StatelessWidget {
-  final String text;
-  final VoidCallback? onPressed;
-  final bool isLoading;
-  final IconData? icon;
+  final String text; // Buton üzerinde gösterilecek metin
+  final VoidCallback? onPressed; // Tıklama aksiyonu
+  final bool isLoading; // True ise yüklenme çarkı gösterilir
+  final IconData? icon; // Opsiyonel ikon
 
   const AppSecondaryButton({
     super.key,
@@ -67,6 +77,7 @@ class AppSecondaryButton extends StatelessWidget {
     this.icon,
   });
 
+  /// İkincil buton arayüzünü çizen temel widget metodu.
   @override
   Widget build(BuildContext context) {
     return OutlinedButton(
@@ -92,11 +103,13 @@ class AppSecondaryButton extends StatelessWidget {
   }
 }
 
+/// Çerçevesiz düz metin butonu (TextButton tabanlı).
+/// Sayfa içi hızlı geçişler, 'Daha Fazla Gör', 'Giriş Yap' gibi sade tıklamalar için kullanılır.
 class AppTextButton extends StatelessWidget {
-  final String text;
-  final VoidCallback? onPressed;
-  final IconData? icon;
-  final Color? color;
+  final String text; // Buton metni
+  final VoidCallback? onPressed; // Tıklama fonksiyonu
+  final IconData? icon; // Opsiyonel ikon
+  final Color? color; // Özel metin rengi
 
   const AppTextButton({
     super.key,
@@ -106,6 +119,7 @@ class AppTextButton extends StatelessWidget {
     this.color,
   });
 
+  /// Metin butonu arayüzünü çizen temel widget metodu.
   @override
   Widget build(BuildContext context) {
     return TextButton(

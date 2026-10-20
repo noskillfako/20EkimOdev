@@ -1,3 +1,9 @@
+/// Dosya: lib/features/auth/presentation/splash_screen.dart
+/// Görev / İşlev: Uygulamanın açılış (Splash) ekranıdır.
+/// Marka logosu ve sloganı yumuşak ölçekleme ve solma (scale & fade) animasyonlarıyla sunar.
+/// Oturum durumunu (authControllerProvider) denetleyerek kullanıcıyı uygun ana sayfaya
+/// veya giriş ekranına otomatik olarak yönlendirir.
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -7,6 +13,7 @@ import '../../../core/theme/app_colors.dart';
 import '../../../core/theme/app_spacing.dart';
 import 'auth_controller.dart';
 
+// Animasyonlu açılış ekranı
 class SplashScreen extends ConsumerStatefulWidget {
   const SplashScreen({super.key});
 
@@ -19,6 +26,7 @@ class _SplashScreenState extends ConsumerState<SplashScreen> with SingleTickerPr
   late Animation<double> _scaleAnimation;
   late Animation<double> _fadeAnimation;
 
+  /// Ekran açılışında animasyon kontrolcülerini başlatır ve yönlendirmeyi tetikler.
   @override
   void initState() {
     super.initState();
@@ -39,6 +47,7 @@ class _SplashScreenState extends ConsumerState<SplashScreen> with SingleTickerPr
     _navigateNext();
   }
 
+  /// Oturum durumunu kontrol ederek gecikmeli yönlendirme yapan metot.
   Future<void> _navigateNext() async {
     await Future.delayed(const Duration(milliseconds: 1800));
     if (!mounted) return;

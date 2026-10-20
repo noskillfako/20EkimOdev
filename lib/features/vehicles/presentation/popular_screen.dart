@@ -1,3 +1,6 @@
+/// Dosya: lib/features/vehicles/presentation/popular_screen.dart
+/// Görev / İşlev: Sistemdeki en popüler ve en çok tercih edilen kiralık araçları
+/// öne çıkan afiş ve trend listesi halinde gösteren Popüler ekranı.
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -9,9 +12,11 @@ import '../../../core/widgets/states.dart';
 import '../../../core/widgets/vehicle_card.dart';
 import 'vehicle_providers.dart';
 
+/// Popüler ve trend araçların sergilendiği ekran widget'ı.
 class PopularScreen extends ConsumerWidget {
   const PopularScreen({super.key});
 
+  /// Popüler araçları asenkron sağlayıcıdan dinler ve arayüzü inşa eder.
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final theme = Theme.of(context);

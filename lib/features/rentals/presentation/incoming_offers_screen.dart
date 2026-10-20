@@ -1,3 +1,8 @@
+/// Dosya: lib/features/rentals/presentation/incoming_offers_screen.dart
+/// Görev / İşlev: Araç sahibine kiracılardan gelen kiralama tekliflerini listeleyen ekrandır (Teklifler Sekmesi).
+/// Bekleyen veya karşı teklif durumundaki teklifleri, teklif veren kiracının bilgilerini ve tutarı gösterir;
+/// tek tıkla teklifi kabul etme, reddetme veya sohbet odasına giderek pazarlık yapma imkanı sunar.
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -16,9 +21,11 @@ import '../../chat/presentation/chat_providers.dart';
 import '../../profile/data/user_repository.dart';
 import '../../vehicles/data/vehicle_repository.dart';
 
+// Araç sahibine gelen teklifleri listeleyen ana ekran widget'ı
 class IncomingOffersScreen extends ConsumerWidget {
   const IncomingOffersScreen({super.key});
 
+  /// Gelen teklifleri filtreleyen ve listeleyen build fonksiyonu.
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final theme = Theme.of(context);

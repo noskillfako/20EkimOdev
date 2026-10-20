@@ -1,3 +1,9 @@
+/// Dosya: lib/features/rentals/presentation/my_rentals_screen.dart
+/// Görev / İşlev: Kiracının yaptığı araç kiralamalarını sekmeli olarak (Aktif, Tamamlanan, Bekleyen)
+/// listeleyen arayüzdür (Kiralamalarım Sekmesi).
+/// Araç sahibinin profilini ve onay rozetini gösterir, tamamlanan kiralamalar için
+/// 'Değerlendir' butonuyla araç ve sahibine yıldızlı puan/yorum verme alt sayfasını açar.
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';

@@ -1,12 +1,18 @@
+/// Dosya: lib/core/widgets/states.dart
+/// Görev / İşlev: Uygulama genelinde kullanılan durum geri bildirim widget'larıdır.
+/// Veri bulunamadığında gösterilen Boş Durum (AppEmptyState), hata durumunda gösterilen
+/// Hata Ekranı (AppErrorState) ve içerik yüklenirken gösterilen İskelet Efekti (AppLoadingShimmer).
+
 import 'package:flutter/material.dart';
 import '../theme/app_spacing.dart';
 
+/// Liste veya sorgu sonucu boş olduğunda kullanıcıyı bilgilendiren ve yönlendiren widget.
 class AppEmptyState extends StatelessWidget {
-  final IconData icon;
-  final String title;
-  final String? subtitle;
-  final String? actionText;
-  final VoidCallback? onAction;
+  final IconData icon; // Ortada gösterilecek büyük sembolik ikon
+  final String title; // Ana durum başlığı (Örn: 'Henüz ilanınız bulunmuyor')
+  final String? subtitle; // Açıklama alt metni
+  final String? actionText; // Opsiyonel yönlendirme buton metni
+  final VoidCallback? onAction; // Buton tıklama eylemi
 
   const AppEmptyState({
     super.key,
@@ -17,6 +23,7 @@ class AppEmptyState extends StatelessWidget {
     this.onAction,
   });
 
+  /// Boş durum görselini, başlığını ve aksiyon butonunu çizer.
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
@@ -69,9 +76,10 @@ class AppEmptyState extends StatelessWidget {
   }
 }
 
+/// İşlem veya veri çekme sırasında oluşan hataları gösteren ve tekrar deneme seçeneği sunan hata widget'ı.
 class AppErrorState extends StatelessWidget {
-  final String message;
-  final VoidCallback? onRetry;
+  final String message; // Hata mesajı metni
+  final VoidCallback? onRetry; // 'Tekrar Dene' butonu tıklama eylemi
 
   const AppErrorState({
     super.key,
@@ -79,6 +87,7 @@ class AppErrorState extends StatelessWidget {
     this.onRetry,
   });
 
+  /// Hata ikonu, mesaj metni ve 'Tekrar Dene' butonunu çizer.
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
@@ -122,10 +131,11 @@ class AppErrorState extends StatelessWidget {
   }
 }
 
+/// Veriler asenkron olarak yüklenirken kullanıcıya içeriğin yerini gösteren iskelet (Shimmer) kutusu.
 class AppLoadingShimmer extends StatelessWidget {
-  final double height;
-  final double width;
-  final double borderRadius;
+  final double height; // Yükseklik (px)
+  final double width; // Genişlik (px, varsayılan sonsuz)
+  final double borderRadius; // Köşe yuvarlatma yarıçapı
 
   const AppLoadingShimmer({
     super.key,
@@ -134,6 +144,7 @@ class AppLoadingShimmer extends StatelessWidget {
     this.borderRadius = 8,
   });
 
+  /// Tema parlaklığına (Açık/Koyu) göre yarı saydam yüklenme kutusunu çizer.
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);

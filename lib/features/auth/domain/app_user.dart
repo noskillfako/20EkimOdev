@@ -1,3 +1,9 @@
+/// Dosya: lib/features/auth/domain/app_user.dart
+/// Görev / İşlev: Uygulamanın temel kullanıcı etki alanı modelidir (Domain Model).
+/// Kullanıcı bilgileri (ad, e-posta, telefon, doğum tarihi, meslek, adli sicil durumu),
+/// çoklu rol desteği ('renter', 'owner', 'both'), Kiracı profili (RenterProfile) ve
+/// Araç Sahibi profilini (OwnerProfile) temsil eden sınıfları ve JSON dönüşümlerini barındırır.
+
 // Kiracı profil alt modeli (Kiralanan araç sayısı ve kiracı değerlendirme puanları)
 class RenterProfile {
   final int rentedCount; // Kullanıcının şimdiye kadar kiraladığı araç sayısı

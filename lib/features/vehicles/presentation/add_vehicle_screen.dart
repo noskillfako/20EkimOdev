@@ -1,3 +1,7 @@
+/// Dosya: lib/features/vehicles/presentation/add_vehicle_screen.dart
+/// Görev / İşlev: Araç sahiplerinin 6 adımlı bir Stepper sihirbazı ile (Araç Bilgileri,
+/// Teknik Detaylar, Fiyatlandırma, Şehir Konumu, Fotoğraf Seçimi, Önizleme) yeni bir
+/// araç ilanını sisteme eklemesini sağlayan form ekranı.
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -12,6 +16,7 @@ import '../data/vehicle_repository.dart';
 import '../domain/vehicle.dart';
 import 'vehicle_providers.dart';
 
+/// Yeni araç ilanı ekleme formu ekran widget'ı.
 class AddVehicleScreen extends ConsumerStatefulWidget {
   const AddVehicleScreen({super.key});
 
@@ -86,6 +91,7 @@ class _AddVehicleScreenState extends ConsumerState<AddVehicleScreen> {
     super.dispose();
   }
 
+  /// Mevcut adımın form doğrulamalarını yapar ve geçerliyse bir sonraki adıma geçer; son adımda ise ilanı yayınlar.
   void _onStepContinue() {
     if (_currentStep == 0) {
       if (!_step1Key.currentState!.validate()) return;
@@ -107,6 +113,7 @@ class _AddVehicleScreenState extends ConsumerState<AddVehicleScreen> {
     }
   }
 
+  /// Bir önceki adıma döner veya ilk adımda ise ekranı kapatır.
   void _onStepCancel() {
     if (_currentStep > 0) {
       setState(() => _currentStep -= 1);
@@ -115,6 +122,7 @@ class _AddVehicleScreenState extends ConsumerState<AddVehicleScreen> {
     }
   }
 
+  /// Girilen tüm form verilerini bir Vehicle nesnesine dönüştürerek ilanı sisteme kaydeder.
   Future<void> _publishListing() async {
     final user = ref.read(authControllerProvider).value;
     if (user == null) return;

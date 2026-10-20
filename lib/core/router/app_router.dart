@@ -1,3 +1,8 @@
+/// Dosya: lib/core/router/app_router.dart
+/// Görev / İşlev: Uygulamanın GoRouter tabanlı yönlendirme ve navigasyon haritasını kurar.
+/// Ekranların rotalarını, URL parametrelerini, alt navigasyon çubuğu (Bottom Navigation)
+/// için StatefulShellRoute yapısını ve aktif role göre dinamik sekme yönlendirmelerini yönetir.
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';

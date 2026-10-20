@@ -1,9 +1,18 @@
+/// Dosya: lib/features/auth/data/auth_repository.dart
+/// Görev / İşlev: Kimlik doğrulama, kullanıcı girişi, yeni üyelik kaydı, çıkış yapma
+/// ve mevcut kullanıcıyı ID ile sorgulama işlemlerini soyutlayan repository arayüzü ve
+/// MockStore ile çalışan sahte (fake) implementasyonudur.
+
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../core/data/mock_store.dart';
 import '../domain/app_user.dart';
 
+/// Kimlik doğrulama işlemleri soyut arayüzü
 abstract class AuthRepository {
+  /// E-posta ve şifre ile sisteme giriş yapar. Başarılı olursa AppUser döner, hatalıysa Exception fırlatır.
   Future<AppUser> login(String email, String password);
+
+  /// Yeni bir kullanıcı hesabı kaydeder ve veritabanına ekler.
   Future<AppUser> register({
     required String email,
     required String password,
@@ -15,15 +24,21 @@ abstract class AuthRepository {
     required String gender,
     required List<String> roles,
   });
+
+  /// Kullanıcı oturumunu sonlandırır.
   Future<void> logout();
+
+  /// Belirtilen kullanıcı ID'sine sahip kullanıcıyı döner, bulunamazsa null döner.
   Future<AppUser?> getCurrentUser(String userId);
 }
 
+// AuthRepository sağlayıcısı
 final authRepositoryProvider = Provider<AuthRepository>((ref) {
   final store = ref.watch(mockStoreProvider);
   return FakeAuthRepository(store);
 });
 
+// MockStore üzerinde çalışan sahte kimlik doğrulama deposu
 class FakeAuthRepository implements AuthRepository {
   final MockStore _store;
 
