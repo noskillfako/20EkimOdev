@@ -1,0 +1,162 @@
+{
+  "brands": [
+    {
+      "name": "Renault",
+      "models": [
+        "Clio",
+        "Megane",
+        "Captur",
+        "Austral"
+      ]
+    },
+    {
+      "name": "Fiat",
+      "models": [
+        "Egea Sedan",
+        "Egea Cross",
+        "500L"
+      ]
+    },
+    {
+      "name": "Volkswagen",
+      "models": [
+        "Golf",
+        "Passat",
+        "Polo",
+        "Tiguan",
+        "T-Roc"
+      ]
+    },
+    {
+      "name": "Toyota",
+      "models": [
+        "Corolla",
+        "Yaris",
+        "C-HR",
+        "RAV4"
+      ]
+    },
+    {
+      "name": "Tesla",
+      "models": [
+        "Model Y",
+        "Model 3"
+      ]
+    },
+    {
+      "name": "BMW",
+      "models": [
+        "320i",
+        "520i",
+        "118i",
+        "X1",
+        "X3"
+      ]
+    },
+    {
+      "name": "Mercedes-Benz",
+      "models": [
+        "C200",
+        "E200",
+        "A180",
+        "GLA"
+      ]
+    },
+    {
+      "name": "Hyundai",
+      "models": [
+        "i20",
+        "Tucson",
+        "Elantra",
+        "Bayon"
+      ]
+    },
+    {
+      "name": "Peugeot",
+      "models": [
+        "208",
+        "308",
+        "2008",
+        "3008"
+      ]
+    },
+    {
+      "name": "Volvo",
+      "models": [
+        "XC40",
+        "XC60",
+        "S60",
+        "V60"
+      ]
+    }
+  ],
+  "fuelTypes": [
+    "benzin",
+    "dizel",
+    "hibrit",
+    "elektrik",
+    "lpg"
+  ],
+  "bodyTypes": [
+    "sedan",
+    "hatchback",
+    "suv",
+    "station_wagon",
+    "coupe"
+  ],
+  "transmissions": [
+    "otomatik",
+    "manuel"
+  ],
+  "colors": [
+    "Beyaz",
+    "Siyah",
+    "Gri",
+    "Gümüş",
+    "Kırmızı",
+    "Mavi",
+    "Füme"
+  ],
+  "cities": [
+    {
+      "name": "İstanbul",
+      "lat": 41.0082,
+      "lng": 28.9784
+    },
+    {
+      "name": "Ankara",
+      "lat": 39.9334,
+      "lng": 32.8597
+    },
+    {
+      "name": "İzmir",
+      "lat": 38.4237,
+      "lng": 27.1428
+    },
+    {
+      "name": "Bursa",
+      "lat": 40.1885,
+      "lng": 29.061
+    },
+    {
+      "name": "Antalya",
+      "lat": 36.8969,
+      "lng": 30.7133
+    },
+    {
+      "name": "Eskişehir",
+      "lat": 39.7767,
+      "lng": 30.5206
+    },
+    {
+      "name": "Muğla",
+      "lat": 37.2153,
+      "lng": 28.3636
+    },
+    {
+      "name": "Adana",
+      "lat": 37.0,
+      "lng": 35.3213
+    }
+  ]
+}

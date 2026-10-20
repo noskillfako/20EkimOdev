@@ -1,0 +1,417 @@
+[
+  {
+    "id": "chat_001",
+    "vehicleId": "veh_001",
+    "ownerId": "usr_002",
+    "renterId": "usr_001",
+    "lastMessage": "950 TL günlük fiyattan 3 günlük kiralama teklifi gönderildi.",
+    "unreadCount": 1,
+    "updatedAt": "2026-10-19T10:20:00Z",
+    "messages": [
+      {
+        "id": "msg_1_1",
+        "senderId": "usr_001",
+        "type": "text",
+        "text": "Merhaba! Renault Clio aracınız için rezervasyon yaptırmak istiyorum, müsait midir?",
+        "createdAt": "2026-10-19T10:15:00Z",
+        "read": true,
+        "offer": null
+      },
+      {
+        "id": "msg_1_2",
+        "senderId": "usr_002",
+        "type": "text",
+        "text": "Merhaba, evet belirtilen tarihler için aracım tamamen müsaittir.",
+        "createdAt": "2026-10-19T10:18:00Z",
+        "read": true,
+        "offer": null
+      },
+      {
+        "id": "msg_1_3",
+        "senderId": "usr_001",
+        "type": "offer",
+        "text": "950 TL günlük fiyattan 3 günlük kiralama teklifi gönderildi.",
+        "createdAt": "2026-10-19T10:20:00Z",
+        "read": true,
+        "offer": {
+          "startDate": "2026-11-05",
+          "endDate": "2026-11-08",
+          "dailyPrice": 950,
+          "totalPrice": 2850,
+          "status": "pending"
+        }
+      }
+    ]
+  },
+  {
+    "id": "chat_002",
+    "vehicleId": "veh_002",
+    "ownerId": "usr_002",
+    "renterId": "usr_003",
+    "lastMessage": "Teklifinizi onayladım! Kiralama detayları ve teslim noktası için görüşmek üzere.",
+    "unreadCount": 0,
+    "updatedAt": "2026-10-19T10:25:00Z",
+    "messages": [
+      {
+        "id": "msg_2_1",
+        "senderId": "usr_003",
+        "type": "text",
+        "text": "Merhaba! Renault Megane aracınız için rezervasyon yaptırmak istiyorum, müsait midir?",
+        "createdAt": "2026-10-19T10:15:00Z",
+        "read": true,
+        "offer": null
+      },
+      {
+        "id": "msg_2_2",
+        "senderId": "usr_002",
+        "type": "text",
+        "text": "Merhaba, evet belirtilen tarihler için aracım tamamen müsaittir.",
+        "createdAt": "2026-10-19T10:18:00Z",
+        "read": true,
+        "offer": null
+      },
+      {
+        "id": "msg_2_3",
+        "senderId": "usr_003",
+        "type": "offer",
+        "text": "1900 TL günlük fiyattan 3 günlük kiralama teklifi gönderildi.",
+        "createdAt": "2026-10-19T10:20:00Z",
+        "read": true,
+        "offer": {
+          "startDate": "2026-11-05",
+          "endDate": "2026-11-08",
+          "dailyPrice": 1900,
+          "totalPrice": 5700,
+          "status": "accepted"
+        }
+      },
+      {
+        "id": "msg_2_4",
+        "senderId": "usr_002",
+        "type": "text",
+        "text": "Teklifinizi onayladım! Kiralama detayları ve teslim noktası için görüşmek üzere.",
+        "createdAt": "2026-10-19T10:25:00Z",
+        "read": true,
+        "offer": null
+      }
+    ]
+  },
+  {
+    "id": "chat_003",
+    "vehicleId": "veh_004",
+    "ownerId": "usr_004",
+    "renterId": "usr_001",
+    "lastMessage": "Teklifinizi onayladım! Kiralama detayları ve teslim noktası için görüşmek üzere.",
+    "unreadCount": 0,
+    "updatedAt": "2026-10-19T10:25:00Z",
+    "messages": [
+      {
+        "id": "msg_3_1",
+        "senderId": "usr_001",
+        "type": "text",
+        "text": "Merhaba! Renault Austral aracınız için rezervasyon yaptırmak istiyorum, müsait midir?",
+        "createdAt": "2026-10-19T10:15:00Z",
+        "read": true,
+        "offer": null
+      },
+      {
+        "id": "msg_3_2",
+        "senderId": "usr_004",
+        "type": "text",
+        "text": "Merhaba, evet belirtilen tarihler için aracım tamamen müsaittir.",
+        "createdAt": "2026-10-19T10:18:00Z",
+        "read": true,
+        "offer": null
+      },
+      {
+        "id": "msg_3_3",
+        "senderId": "usr_001",
+        "type": "offer",
+        "text": "2250 TL günlük fiyattan 3 günlük kiralama teklifi gönderildi.",
+        "createdAt": "2026-10-19T10:20:00Z",
+        "read": true,
+        "offer": {
+          "startDate": "2026-11-05",
+          "endDate": "2026-11-08",
+          "dailyPrice": 2250,
+          "totalPrice": 6750,
+          "status": "accepted"
+        }
+      },
+      {
+        "id": "msg_3_4",
+        "senderId": "usr_004",
+        "type": "text",
+        "text": "Teklifinizi onayladım! Kiralama detayları ve teslim noktası için görüşmek üzere.",
+        "createdAt": "2026-10-19T10:25:00Z",
+        "read": true,
+        "offer": null
+      }
+    ]
+  },
+  {
+    "id": "chat_004",
+    "vehicleId": "veh_001",
+    "ownerId": "usr_002",
+    "renterId": "usr_006",
+    "lastMessage": "Teklifinizi onayladım! Kiralama detayları ve teslim noktası için görüşmek üzere.",
+    "unreadCount": 0,
+    "updatedAt": "2026-10-19T10:25:00Z",
+    "messages": [
+      {
+        "id": "msg_4_1",
+        "senderId": "usr_006",
+        "type": "text",
+        "text": "Merhaba! Renault Clio aracınız için rezervasyon yaptırmak istiyorum, müsait midir?",
+        "createdAt": "2026-10-19T10:15:00Z",
+        "read": true,
+        "offer": null
+      },
+      {
+        "id": "msg_4_2",
+        "senderId": "usr_002",
+        "type": "text",
+        "text": "Merhaba, evet belirtilen tarihler için aracım tamamen müsaittir.",
+        "createdAt": "2026-10-19T10:18:00Z",
+        "read": true,
+        "offer": null
+      },
+      {
+        "id": "msg_4_3",
+        "senderId": "usr_006",
+        "type": "offer",
+        "text": "950 TL günlük fiyattan 3 günlük kiralama teklifi gönderildi.",
+        "createdAt": "2026-10-19T10:20:00Z",
+        "read": true,
+        "offer": {
+          "startDate": "2026-11-05",
+          "endDate": "2026-11-08",
+          "dailyPrice": 950,
+          "totalPrice": 2850,
+          "status": "accepted"
+        }
+      },
+      {
+        "id": "msg_4_4",
+        "senderId": "usr_002",
+        "type": "text",
+        "text": "Teklifinizi onayladım! Kiralama detayları ve teslim noktası için görüşmek üzere.",
+        "createdAt": "2026-10-19T10:25:00Z",
+        "read": true,
+        "offer": null
+      }
+    ]
+  },
+  {
+    "id": "chat_005",
+    "vehicleId": "veh_007",
+    "ownerId": "usr_005",
+    "renterId": "usr_007",
+    "lastMessage": "Teklifinizi onayladım! Kiralama detayları ve teslim noktası için görüşmek üzere.",
+    "unreadCount": 0,
+    "updatedAt": "2026-10-19T10:25:00Z",
+    "messages": [
+      {
+        "id": "msg_5_1",
+        "senderId": "usr_007",
+        "type": "text",
+        "text": "Merhaba! Volkswagen Golf aracınız için rezervasyon yaptırmak istiyorum, müsait midir?",
+        "createdAt": "2026-10-19T10:15:00Z",
+        "read": true,
+        "offer": null
+      },
+      {
+        "id": "msg_5_2",
+        "senderId": "usr_005",
+        "type": "text",
+        "text": "Merhaba, evet belirtilen tarihler için aracım tamamen müsaittir.",
+        "createdAt": "2026-10-19T10:18:00Z",
+        "read": true,
+        "offer": null
+      },
+      {
+        "id": "msg_5_3",
+        "senderId": "usr_007",
+        "type": "offer",
+        "text": "2400 TL günlük fiyattan 3 günlük kiralama teklifi gönderildi.",
+        "createdAt": "2026-10-19T10:20:00Z",
+        "read": true,
+        "offer": {
+          "startDate": "2026-11-05",
+          "endDate": "2026-11-08",
+          "dailyPrice": 2400,
+          "totalPrice": 7200,
+          "status": "accepted"
+        }
+      },
+      {
+        "id": "msg_5_4",
+        "senderId": "usr_005",
+        "type": "text",
+        "text": "Teklifinizi onayladım! Kiralama detayları ve teslim noktası için görüşmek üzere.",
+        "createdAt": "2026-10-19T10:25:00Z",
+        "read": true,
+        "offer": null
+      }
+    ]
+  },
+  {
+    "id": "chat_006",
+    "vehicleId": "veh_009",
+    "ownerId": "usr_004",
+    "renterId": "usr_008",
+    "lastMessage": "Teklifinizi onayladım! Kiralama detayları ve teslim noktası için görüşmek üzere.",
+    "unreadCount": 0,
+    "updatedAt": "2026-10-19T10:25:00Z",
+    "messages": [
+      {
+        "id": "msg_6_1",
+        "senderId": "usr_008",
+        "type": "text",
+        "text": "Merhaba! Volkswagen Tiguan aracınız için rezervasyon yaptırmak istiyorum, müsait midir?",
+        "createdAt": "2026-10-19T10:15:00Z",
+        "read": true,
+        "offer": null
+      },
+      {
+        "id": "msg_6_2",
+        "senderId": "usr_004",
+        "type": "text",
+        "text": "Merhaba, evet belirtilen tarihler için aracım tamamen müsaittir.",
+        "createdAt": "2026-10-19T10:18:00Z",
+        "read": true,
+        "offer": null
+      },
+      {
+        "id": "msg_6_3",
+        "senderId": "usr_008",
+        "type": "offer",
+        "text": "2300 TL günlük fiyattan 3 günlük kiralama teklifi gönderildi.",
+        "createdAt": "2026-10-19T10:20:00Z",
+        "read": true,
+        "offer": {
+          "startDate": "2026-11-05",
+          "endDate": "2026-11-08",
+          "dailyPrice": 2300,
+          "totalPrice": 6900,
+          "status": "accepted"
+        }
+      },
+      {
+        "id": "msg_6_4",
+        "senderId": "usr_004",
+        "type": "text",
+        "text": "Teklifinizi onayladım! Kiralama detayları ve teslim noktası için görüşmek üzere.",
+        "createdAt": "2026-10-19T10:25:00Z",
+        "read": true,
+        "offer": null
+      }
+    ]
+  },
+  {
+    "id": "chat_007",
+    "vehicleId": "veh_002",
+    "ownerId": "usr_002",
+    "renterId": "usr_009",
+    "lastMessage": "Teklifinizi onayladım! Kiralama detayları ve teslim noktası için görüşmek üzere.",
+    "unreadCount": 0,
+    "updatedAt": "2026-10-19T10:25:00Z",
+    "messages": [
+      {
+        "id": "msg_7_1",
+        "senderId": "usr_009",
+        "type": "text",
+        "text": "Merhaba! Renault Megane aracınız için rezervasyon yaptırmak istiyorum, müsait midir?",
+        "createdAt": "2026-10-19T10:15:00Z",
+        "read": true,
+        "offer": null
+      },
+      {
+        "id": "msg_7_2",
+        "senderId": "usr_002",
+        "type": "text",
+        "text": "Merhaba, evet belirtilen tarihler için aracım tamamen müsaittir.",
+        "createdAt": "2026-10-19T10:18:00Z",
+        "read": true,
+        "offer": null
+      },
+      {
+        "id": "msg_7_3",
+        "senderId": "usr_009",
+        "type": "offer",
+        "text": "1900 TL günlük fiyattan 3 günlük kiralama teklifi gönderildi.",
+        "createdAt": "2026-10-19T10:20:00Z",
+        "read": true,
+        "offer": {
+          "startDate": "2026-11-05",
+          "endDate": "2026-11-08",
+          "dailyPrice": 1900,
+          "totalPrice": 5700,
+          "status": "accepted"
+        }
+      },
+      {
+        "id": "msg_7_4",
+        "senderId": "usr_002",
+        "type": "text",
+        "text": "Teklifinizi onayladım! Kiralama detayları ve teslim noktası için görüşmek üzere.",
+        "createdAt": "2026-10-19T10:25:00Z",
+        "read": true,
+        "offer": null
+      }
+    ]
+  },
+  {
+    "id": "chat_008",
+    "vehicleId": "veh_014",
+    "ownerId": "usr_005",
+    "renterId": "usr_003",
+    "lastMessage": "Teklifinizi onayladım! Kiralama detayları ve teslim noktası için görüşmek üzere.",
+    "unreadCount": 0,
+    "updatedAt": "2026-10-19T10:25:00Z",
+    "messages": [
+      {
+        "id": "msg_8_1",
+        "senderId": "usr_003",
+        "type": "text",
+        "text": "Merhaba! Tesla Model Y aracınız için rezervasyon yaptırmak istiyorum, müsait midir?",
+        "createdAt": "2026-10-19T10:15:00Z",
+        "read": true,
+        "offer": null
+      },
+      {
+        "id": "msg_8_2",
+        "senderId": "usr_005",
+        "type": "text",
+        "text": "Merhaba, evet belirtilen tarihler için aracım tamamen müsaittir.",
+        "createdAt": "2026-10-19T10:18:00Z",
+        "read": true,
+        "offer": null
+      },
+      {
+        "id": "msg_8_3",
+        "senderId": "usr_003",
+        "type": "offer",
+        "text": "4350 TL günlük fiyattan 3 günlük kiralama teklifi gönderildi.",
+        "createdAt": "2026-10-19T10:20:00Z",
+        "read": true,
+        "offer": {
+          "startDate": "2026-11-05",
+          "endDate": "2026-11-08",
+          "dailyPrice": 4350,
+          "totalPrice": 13050,
+          "status": "accepted"
+        }
+      },
+      {
+        "id": "msg_8_4",
+        "senderId": "usr_005",
+        "type": "text",
+        "text": "Teklifinizi onayladım! Kiralama detayları ve teslim noktası için görüşmek üzere.",
+        "createdAt": "2026-10-19T10:25:00Z",
+        "read": true,
+        "offer": null
+      }
+    ]
+  }
+]

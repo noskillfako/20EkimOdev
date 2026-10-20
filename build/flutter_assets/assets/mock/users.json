@@ -1,0 +1,440 @@
+[
+  {
+    "id": "usr_001",
+    "email": "kiraci@test.com",
+    "name": "Ali Yılmaz",
+    "password": "password123",
+    "birthDate": "1994-05-14",
+    "profession": "Yazılım Mühendisi",
+    "maritalStatus": "Bekar",
+    "gender": "Erkek",
+    "phone": "+90 532 100 2030",
+    "roles": [
+      "renter"
+    ],
+    "activeRole": "renter",
+    "criminalRecordStatus": "verified",
+    "avatarUrl": "",
+    "renterProfile": {
+      "rentedCount": 8,
+      "ratingAvg": 4.9,
+      "ratingCount": 7
+    },
+    "ownerProfile": null
+  },
+  {
+    "id": "usr_002",
+    "email": "sahip@test.com",
+    "name": "Mehmet Demir",
+    "password": "password123",
+    "birthDate": "1988-11-23",
+    "profession": "Mimar",
+    "maritalStatus": "Evli",
+    "gender": "Erkek",
+    "phone": "+90 533 200 3040",
+    "roles": [
+      "owner"
+    ],
+    "activeRole": "owner",
+    "criminalRecordStatus": "verified",
+    "avatarUrl": "",
+    "renterProfile": null,
+    "ownerProfile": {
+      "listingCount": 5,
+      "rentedOutCount": 5,
+      "ratingAvg": 4.5,
+      "ratingCount": 4
+    }
+  },
+  {
+    "id": "usr_003",
+    "email": "ikisi@test.com",
+    "name": "Ayşe Kaya",
+    "password": "password123",
+    "birthDate": "1992-08-19",
+    "profession": "Doktor",
+    "maritalStatus": "Bekar",
+    "gender": "Kadın",
+    "phone": "+90 535 300 4050",
+    "roles": [
+      "renter",
+      "owner"
+    ],
+    "activeRole": "renter",
+    "criminalRecordStatus": "verified",
+    "avatarUrl": "",
+    "renterProfile": {
+      "rentedCount": 0,
+      "ratingAvg": 4.9,
+      "ratingCount": 0
+    },
+    "ownerProfile": {
+      "listingCount": 5,
+      "rentedOutCount": 4,
+      "ratingAvg": 4.8,
+      "ratingCount": 4
+    }
+  },
+  {
+    "id": "usr_004",
+    "email": "fatma.celik@example.com",
+    "name": "Fatma Çelik",
+    "password": "password123",
+    "birthDate": "1998-02-01",
+    "profession": "Öğretmen",
+    "maritalStatus": "Bekar",
+    "gender": "Erkek",
+    "phone": "+90 533 242 2396",
+    "roles": [
+      "renter",
+      "owner"
+    ],
+    "activeRole": "owner",
+    "criminalRecordStatus": "verified",
+    "avatarUrl": "",
+    "renterProfile": {
+      "rentedCount": 4,
+      "ratingAvg": 4.7,
+      "ratingCount": 3
+    },
+    "ownerProfile": {
+      "listingCount": 5,
+      "rentedOutCount": 3,
+      "ratingAvg": 5.0,
+      "ratingCount": 3
+    }
+  },
+  {
+    "id": "usr_005",
+    "email": "can.yildiz@example.com",
+    "name": "Can Yıldız",
+    "password": "password123",
+    "birthDate": "1995-02-19",
+    "profession": "Pazarlama Uzmanı",
+    "maritalStatus": "Bekar",
+    "gender": "Kadın",
+    "phone": "+90 530 195 3739",
+    "roles": [
+      "renter",
+      "owner"
+    ],
+    "activeRole": "renter",
+    "criminalRecordStatus": "verified",
+    "avatarUrl": "",
+    "renterProfile": {
+      "rentedCount": 3,
+      "ratingAvg": 4.3,
+      "ratingCount": 3
+    },
+    "ownerProfile": {
+      "listingCount": 5,
+      "rentedOutCount": 3,
+      "ratingAvg": 5.0,
+      "ratingCount": 3
+    }
+  },
+  {
+    "id": "usr_006",
+    "email": "zeynep.ozturk@example.com",
+    "name": "Zeynep Öztürk",
+    "password": "password123",
+    "birthDate": "1978-09-07",
+    "profession": "Makine Mühendisi",
+    "maritalStatus": "Evli",
+    "gender": "Erkek",
+    "phone": "+90 533 559 8545",
+    "roles": [
+      "owner"
+    ],
+    "activeRole": "owner",
+    "criminalRecordStatus": "verified",
+    "avatarUrl": "",
+    "renterProfile": null,
+    "ownerProfile": {
+      "listingCount": 5,
+      "rentedOutCount": 3,
+      "ratingAvg": 5.0,
+      "ratingCount": 3
+    }
+  },
+  {
+    "id": "usr_007",
+    "email": "burak.aydin@example.com",
+    "name": "Burak Aydın",
+    "password": "password123",
+    "birthDate": "1978-03-23",
+    "profession": "Pazarlama Uzmanı",
+    "maritalStatus": "Evli",
+    "gender": "Kadın",
+    "phone": "+90 534 259 3753",
+    "roles": [
+      "owner"
+    ],
+    "activeRole": "owner",
+    "criminalRecordStatus": "verified",
+    "avatarUrl": "",
+    "renterProfile": null,
+    "ownerProfile": {
+      "listingCount": 5,
+      "rentedOutCount": 3,
+      "ratingAvg": 4.7,
+      "ratingCount": 3
+    }
+  },
+  {
+    "id": "usr_008",
+    "email": "elif.ozdemir@example.com",
+    "name": "Elif Özdemir",
+    "password": "password123",
+    "birthDate": "1990-02-12",
+    "profession": "Grafik Tasarımcı",
+    "maritalStatus": "Evli",
+    "gender": "Erkek",
+    "phone": "+90 530 847 6878",
+    "roles": [
+      "owner"
+    ],
+    "activeRole": "owner",
+    "criminalRecordStatus": "verified",
+    "avatarUrl": "",
+    "renterProfile": null,
+    "ownerProfile": {
+      "listingCount": 5,
+      "rentedOutCount": 3,
+      "ratingAvg": 4.7,
+      "ratingCount": 3
+    }
+  },
+  {
+    "id": "usr_009",
+    "email": "deniz.arslan@example.com",
+    "name": "Deniz Arslan",
+    "password": "password123",
+    "birthDate": "1990-02-18",
+    "profession": "Öğretmen",
+    "maritalStatus": "Evli",
+    "gender": "Kadın",
+    "phone": "+90 539 296 1815",
+    "roles": [
+      "owner"
+    ],
+    "activeRole": "owner",
+    "criminalRecordStatus": "verified",
+    "avatarUrl": "",
+    "renterProfile": null,
+    "ownerProfile": {
+      "listingCount": 5,
+      "rentedOutCount": 3,
+      "ratingAvg": 5.0,
+      "ratingCount": 2
+    }
+  },
+  {
+    "id": "usr_010",
+    "email": "emre.dogan@example.com",
+    "name": "Emre Doğan",
+    "password": "password123",
+    "birthDate": "2002-05-03",
+    "profession": "Doktor",
+    "maritalStatus": "Bekar",
+    "gender": "Erkek",
+    "phone": "+90 536 384 6891",
+    "roles": [
+      "owner"
+    ],
+    "activeRole": "owner",
+    "criminalRecordStatus": "verified",
+    "avatarUrl": "",
+    "renterProfile": null,
+    "ownerProfile": {
+      "listingCount": 5,
+      "rentedOutCount": 3,
+      "ratingAvg": 5.0,
+      "ratingCount": 2
+    }
+  },
+  {
+    "id": "usr_011",
+    "email": "selin.kilic@example.com",
+    "name": "Selin Kılıç",
+    "password": "password123",
+    "birthDate": "1983-06-12",
+    "profession": "Doktor",
+    "maritalStatus": "Evli",
+    "gender": "Kadın",
+    "phone": "+90 531 723 9131",
+    "roles": [
+      "renter"
+    ],
+    "activeRole": "renter",
+    "criminalRecordStatus": "verified",
+    "avatarUrl": "",
+    "renterProfile": {
+      "rentedCount": 3,
+      "ratingAvg": 5.0,
+      "ratingCount": 3
+    },
+    "ownerProfile": null
+  },
+  {
+    "id": "usr_012",
+    "email": "murat.aslan@example.com",
+    "name": "Murat Aslan",
+    "password": "password123",
+    "birthDate": "1985-03-15",
+    "profession": "Pazarlama Uzmanı",
+    "maritalStatus": "Evli",
+    "gender": "Erkek",
+    "phone": "+90 538 324 9751",
+    "roles": [
+      "renter"
+    ],
+    "activeRole": "renter",
+    "criminalRecordStatus": "verified",
+    "avatarUrl": "",
+    "renterProfile": {
+      "rentedCount": 3,
+      "ratingAvg": 4.7,
+      "ratingCount": 3
+    },
+    "ownerProfile": null
+  },
+  {
+    "id": "usr_013",
+    "email": "ece.cetin@example.com",
+    "name": "Ece Çetin",
+    "password": "password123",
+    "birthDate": "2002-01-08",
+    "profession": "Yazılım Mühendisi",
+    "maritalStatus": "Evli",
+    "gender": "Kadın",
+    "phone": "+90 536 374 1837",
+    "roles": [
+      "renter"
+    ],
+    "activeRole": "renter",
+    "criminalRecordStatus": "verified",
+    "avatarUrl": "",
+    "renterProfile": {
+      "rentedCount": 3,
+      "ratingAvg": 5.0,
+      "ratingCount": 3
+    },
+    "ownerProfile": null
+  },
+  {
+    "id": "usr_014",
+    "email": "oguz.kara@example.com",
+    "name": "Oğuz Kara",
+    "password": "password123",
+    "birthDate": "1996-12-11",
+    "profession": "Doktor",
+    "maritalStatus": "Evli",
+    "gender": "Erkek",
+    "phone": "+90 536 758 6828",
+    "roles": [
+      "renter"
+    ],
+    "activeRole": "renter",
+    "criminalRecordStatus": "verified",
+    "avatarUrl": "",
+    "renterProfile": {
+      "rentedCount": 3,
+      "ratingAvg": 4.0,
+      "ratingCount": 1
+    },
+    "ownerProfile": null
+  },
+  {
+    "id": "usr_015",
+    "email": "busra.koc@example.com",
+    "name": "Büşra Koç",
+    "password": "password123",
+    "birthDate": "1985-12-18",
+    "profession": "Makine Mühendisi",
+    "maritalStatus": "Evli",
+    "gender": "Kadın",
+    "phone": "+90 539 538 8461",
+    "roles": [
+      "renter"
+    ],
+    "activeRole": "renter",
+    "criminalRecordStatus": "verified",
+    "avatarUrl": "",
+    "renterProfile": {
+      "rentedCount": 3,
+      "ratingAvg": 4.5,
+      "ratingCount": 2
+    },
+    "ownerProfile": null
+  },
+  {
+    "id": "usr_016",
+    "email": "kerem.kurt@example.com",
+    "name": "Kerem Kurt",
+    "password": "password123",
+    "birthDate": "1982-09-16",
+    "profession": "Avukat",
+    "maritalStatus": "Bekar",
+    "gender": "Erkek",
+    "phone": "+90 531 256 9030",
+    "roles": [
+      "renter"
+    ],
+    "activeRole": "renter",
+    "criminalRecordStatus": "verified",
+    "avatarUrl": "",
+    "renterProfile": {
+      "rentedCount": 0,
+      "ratingAvg": 4.9,
+      "ratingCount": 0
+    },
+    "ownerProfile": null
+  },
+  {
+    "id": "usr_017",
+    "email": "gizem.sahin@example.com",
+    "name": "Gizem Şahin",
+    "password": "password123",
+    "birthDate": "1991-10-03",
+    "profession": "Pazarlama Uzmanı",
+    "maritalStatus": "Evli",
+    "gender": "Kadın",
+    "phone": "+90 539 579 7742",
+    "roles": [
+      "renter"
+    ],
+    "activeRole": "renter",
+    "criminalRecordStatus": "verified",
+    "avatarUrl": "",
+    "renterProfile": {
+      "rentedCount": 0,
+      "ratingAvg": 4.9,
+      "ratingCount": 0
+    },
+    "ownerProfile": null
+  },
+  {
+    "id": "usr_018",
+    "email": "baris.polat@example.com",
+    "name": "Barış Polat",
+    "password": "password123",
+    "birthDate": "1978-11-24",
+    "profession": "Avukat",
+    "maritalStatus": "Evli",
+    "gender": "Erkek",
+    "phone": "+90 535 214 4765",
+    "roles": [
+      "renter"
+    ],
+    "activeRole": "renter",
+    "criminalRecordStatus": "verified",
+    "avatarUrl": "",
+    "renterProfile": {
+      "rentedCount": 0,
+      "ratingAvg": 4.9,
+      "ratingCount": 0
+    },
+    "ownerProfile": null
+  }
+]
